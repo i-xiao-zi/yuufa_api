@@ -30,7 +30,7 @@ export default class HttpExceptionFilter implements ExceptionFilter {
     }
     
     // 返回错误响应格式
-    response.status(status).json({
+    response.json({
       code: status,
       message,
       data: null,
