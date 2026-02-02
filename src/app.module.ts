@@ -1,6 +1,5 @@
 import { Module } from '@nestjs/common';
 import {ConfigModule} from '@nestjs/config';
-import {HttpModule} from '@nestjs/axios';
 import AuthModule from './module/auth';
 import AppController from './controller/app';
 import AppService from './service/app';
@@ -14,7 +13,6 @@ import SearchorService from "./service/searchor";
 @Module({
   imports: [
     ConfigModule.forRoot({isGlobal: true}),
-    HttpModule,
     MysqlModule,
     AuthModule,
     ResponseModule,
