@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import User from 'src/entity/user';
+import User from '../entity/user';
 import {ConfigModule, ConfigService} from "@nestjs/config";
 import fs from "fs";
 import path from "path";
