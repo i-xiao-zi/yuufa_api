@@ -20,7 +20,8 @@ export default class AppService {
   }
 
   async upload(file: Express.Multer.File) {
-    const filename = `${hash(file.buffer.toString())}${path.extname(file.originalname)}`
+    const dir = file.mimetype.split('/')[0]
+    const filename = `${dir}s/${hash(file.buffer.toString())}${path.extname(file.originalname)}`
     console.log(filename)
     const {sha} = await this.get(filename)
     const result = await this.put(filename, file.buffer, sha)

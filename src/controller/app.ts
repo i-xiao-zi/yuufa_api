@@ -1,13 +1,9 @@
 import {Controller, Get, Post, UploadedFile, UploadedFiles, UseGuards, UseInterceptors} from '@nestjs/common';
 import AppService from '../service/app';
 import Json from '../decorator/json';
-import {AuthGuard} from "@nestjs/passport";
-import {ConfigService} from "@nestjs/config";
 import Public from "../decorator/public";
 import "multer";
 import {FileInterceptor} from "@nestjs/platform-express";
-import {memoryStorage} from "multer";
-import githubStorage from "./github.storage";
 import {ApiBody, ApiOperation, ApiQuery, ApiResponse, ApiTags} from "@nestjs/swagger";
 
 @ApiTags("APP")
