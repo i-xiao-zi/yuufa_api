@@ -10,8 +10,8 @@ export default class NoteService {
   index() {
     return instanceToPlain(this.children(0));
   }
-  find(id: number) {
-    return this.noteContentModelService.find(id);
+  findContent(id: number) {
+    return instanceToPlain(this.noteContentModelService.find(id));
   }
   createContent(data: CreateNoteContent) {
     return instanceToPlain(this.noteContentModelService.save(data));

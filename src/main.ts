@@ -17,11 +17,12 @@ async function bootstrap() {
       },
     }),
   );
-  if (process.env.NODE_ENV !== 'production') {
+  // if (process.env.NODE_ENV !== 'production') {
+  if (true) {
     const config = new DocumentBuilder()
       .setTitle('API 文档')
-      .setDescription('The cats API description')
-      .setVersion('1.0')
+      // .setDescription('The cats API description')
+      // .setVersion('1.0')
       .build();
     const documentFactory = () => SwaggerModule.createDocument(app, config);
     SwaggerModule.setup('docs', app, documentFactory);

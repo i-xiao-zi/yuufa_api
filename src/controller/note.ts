@@ -22,10 +22,10 @@ export default class NoteController {
 
   @ApiOperation({summary: "通过 ID 获取笔记"})
   @ApiResponse({type: NoteContent})
-  @Get(":id")
+  @Get("content/:id")
   @Public()
-  find(@Param("id") id: number) {
-    return this.noteService.find(id);
+  findContent(@Param("id") id: number) {
+    return this.noteService.findContent(id);
   }
 
   @ApiOperation({summary: "添加笔记"})
