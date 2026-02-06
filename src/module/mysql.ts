@@ -28,6 +28,7 @@ import NoteContent from '../entity/note_content';
         entities: [__dirname + '../entity/*.ts'],
         autoLoadEntities: true,
         logging: true,
+        timezone: "+08:00",
         logger: "advanced-console",
         ssl: {
           ca: fs.readFileSync(path.join(__dirname, '../../mysql.pem')),
