@@ -6,7 +6,7 @@ import { instanceToPlain } from "class-transformer";
 @Injectable()
 export default class SearchorService {
   constructor(private readonly searchorModelService: SearchorModelService, private readonly searchorTypeModelService: SearchorTypeModelService) {}
-  async index() {
-    return instanceToPlain(await this.searchorTypeModelService.all());
+  index() {
+    return instanceToPlain(this.searchorTypeModelService.all());
   }
 }
