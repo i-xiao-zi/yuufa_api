@@ -28,6 +28,7 @@ export default class HttpExceptionFilter implements ExceptionFilter {
         message = exceptionResponse['message'] as string | string[];
       }
     }
+    console.log(exception);
     
     // 返回错误响应格式
     response.json({

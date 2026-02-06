@@ -9,6 +9,8 @@ import AuthController from "./controller/auth";
 import AuthService from "./service/auth";
 import SearchorController from "./controller/searchor";
 import SearchorService from "./service/searchor";
+import NoteController from './controller/note';
+import NoteService from './service/note';
 
 @Module({
   imports: [
@@ -20,11 +22,13 @@ import SearchorService from "./service/searchor";
   controllers: [
     AppController,
     AuthController,
+    NoteController,
     SearchorController
   ],
   providers: [
     AppService,
     AuthService,
+    NoteService,
     SearchorService,
   ],
 })
