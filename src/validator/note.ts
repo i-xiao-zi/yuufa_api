@@ -16,22 +16,27 @@ export class CreateNoteContent {
 
   @ApiProperty({required: false})
   @IsNumber()
+  @IsOptional()
   sort?: number;
 }
 export class UpdateNoteContent {
   @ApiProperty({required: false})
   @IsNumber()
+  @IsOptional()
   category_id?: number;
 
   @ApiProperty({required: false})
   @IsString()
+  @IsOptional()
   title?: string;
 
   @ApiProperty({required: false})
   @IsString()
+  @IsOptional()
   content?: string;
 
   @ApiProperty({required: false})
   @IsNumber()
+  @IsOptional()
   sort?: number;
 }
