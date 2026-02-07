@@ -10,7 +10,7 @@ async function bootstrap() {
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,        // 自动删除非 DTO 中的属性
-      forbidNonWhitelisted: true, // 如果有非白名单属性，抛出错误
+      forbidNonWhitelisted: false, // 如果有非白名单属性，抛出错误
       transform: true,        // 自动类型转换
       transformOptions: {
         enableImplicitConversion: true, // 启用隐式转换
